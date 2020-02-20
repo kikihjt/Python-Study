@@ -12,6 +12,6 @@ t= open("1.txt","w")
 for row in rsheet.get_rows():
 	write_value=row[2]
 	result=str(write_value)
-	t.write(result+'\n')
+	t.write(result.replace('text:',' ').replace('empty',' ')+'\n')
 
 t.close()
